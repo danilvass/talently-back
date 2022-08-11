@@ -1,0 +1,21 @@
+
+DELIMITER //
+
+CREATE PROCEDURE CreateAccountToken(
+     	IN user_id CHAR(36),
+    Out user_token CHAR(36)
+)
+BEGIN
+
+	DEClARE token_id CHAR(36) DEFAULT null;
+
+    set user_token = UUID() ;
+    set token_id = UUID() ;
+
+	Insert
+		Into account_tokens (token_id , token , user_id)
+		values (token_id , user_token , user_id);
+
+END//
+
+DELIMITER ;

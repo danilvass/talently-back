@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"
+        >
+
+
+<configuration >
+    <properties resource="application.properties" />
+    <environments default="development" >
+        <environment id="development" >
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED" >
+                <property name="driver" value="${mysql.database.driver}" />
+                <property name="url" value="${mysql.database.url}"/>
+                <property name="username" value="${mysql.database.username}"/>
+                <property name="password" value="${mysql.database.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.AuthorizationMapper"/>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.MediaMapper"/>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.PostMapper"/>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.ProfileDataMapper"/>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.PortfolioMapper"/>
+        <mapper class="com.tripled.talentlyapp.database.Mappers.SubscribeMapper"/>
+    </mappers>
+</configuration>

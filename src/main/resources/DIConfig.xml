@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="DbUserCredentialsRepository" class="com.tripled.talentlyapp.database.repositories.UserCredentialsRepository.DbUserCredentialsRepository" />
+    <bean id="DatabaseConfiguration" class="com.tripled.talentlyapp.database.configuration.DatabaseConfiguration" />
+    <bean id="MediaRepository" class="com.tripled.talentlyapp.database.repositories.MediaRepository.MediaRepository"  />
+    <bean id="PortfolioRepository" class="com.tripled.talentlyapp.database.repositories.PortfolioRepository.PortfolioRepository"  />
+    <bean id="ProfileRepository" class="com.tripled.talentlyapp.database.repositories.ProfileRepository.ProfileRepository"  />
+    <bean id="PostRepository" class="com.tripled.talentlyapp.database.repositories.PostRepository.PostRepository" />
+    <bean id="SubscribeRepository" class="com.tripled.talentlyapp.database.repositories.SubscribeRepository.SubscribeRepository" />
+</beans>
